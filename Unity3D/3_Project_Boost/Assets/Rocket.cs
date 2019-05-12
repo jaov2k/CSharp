@@ -6,7 +6,7 @@ public class Rocket : MonoBehaviour {
     // todo fix lighting bug
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 100f;
-    [SerializeField] float levelLoadDelay = 1f;
+    [SerializeField] float levelLoadDelay = 2f;
 
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip success;
@@ -70,6 +70,7 @@ public class Rocket : MonoBehaviour {
     {
         state = State.Dying;
         audioSource.Stop();
+        mainEngineParticles.Stop();
         audioSource.PlayOneShot(death);
         deathParticles.Play();
         Invoke("LoadFirstLevel", levelLoadDelay); // parameterise time
