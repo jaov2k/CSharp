@@ -23,25 +23,13 @@ namespace arch2mmWpf
             FeetTextbox.SelectAll();
         }
 
-        private void InchTextbox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            InchTextbox.SelectAll();
-        }
+        private void InchTextbox_GotFocus(object sender, RoutedEventArgs e) => InchTextbox.SelectAll();
 
-        private void NumeratorTextbox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            NumeratorTextbox.SelectAll();
-        }
+        private void NumeratorTextbox_GotFocus(object sender, RoutedEventArgs e) => NumeratorTextbox.SelectAll();
 
-        private void DenominatorTextbox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            DenominatorTextbox.SelectAll();
-        }
+        private void DenominatorTextbox_GotFocus(object sender, RoutedEventArgs e) => DenominatorTextbox.SelectAll();
 
-        private void FeetTextbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            update();
-        }
+        private void FeetTextbox_TextChanged(object sender, TextChangedEventArgs e) => update();
 
         private void InchTextbox_TextChanged(object sender, TextChangedEventArgs e)
         {
